@@ -1,0 +1,13 @@
+// Load all local vars...
+@import './vars/colors';
+@import './vars/typography';
+@import './vars/width';
+@import './vars/spacing';
+@import './vars/sizes';
+@import './vars/visibility';
+// @import './vars/transitions';
+// @import './vars/borders';
+
+// ...then the Bulma defaults for the remaining values.
+@import 'bulma/sass/utilities/initial-variables';
+@import 'bulma/sass/utilities/derived-variables';

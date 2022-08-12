@@ -1,0 +1,26 @@
+$primary: #6666ff !default;
+$primary-light: #9999ff !default;
+$primary-lighter: #ccccff !default;
+$secondary: #fe9f67 !default;
+$secondary-light: #febb92 !default;
+$secondary-lighter: #fed6bd !default;
+$tertiary: #b283ac !default;
+$tertiary-light: #c8a7c4 !default;
+$tertiary-lighter: #decadb !default;
+
+
+$colors-list: (
+  primary: $primary,
+  primary-light: $primary-light,
+  primary-lighter: $primary-lighter,
+  secondary: $secondary,
+  secondary-light: $secondary-light,
+  secondary-lighter: $secondary-lighter,
+  tertiary: $tertiary,
+  tertiary-light: $tertiary-light,
+  tertiary-lighter: $tertiary-lighter,
+  ) !default;
+
+// @function getColor($color-group, $color) {
+//   @return map-get($colors-list, $color-group, $color);
+// }

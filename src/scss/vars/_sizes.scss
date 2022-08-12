@@ -1,0 +1,25 @@
+@import './spacing';
+@import './typography';
+
+$size-list: (
+    small: (
+        font-size: fontSize(2),
+        padding: spacing(3) spacing(4),
+    ),
+    medium: (
+        font-size: fontSize(3),
+        padding: spacing(3) spacing(5),
+    ),
+    large: (
+        font-size: fontSize(4),
+        padding: spacing(3) spacing(6),
+    ),
+) !default;
+
+@function getSize($size) {
+    @return map-get($size-list, $size);
+}
+
+$small: getSize('small') !default;
+$medium: getSize('medium') !default;
+$large: getSize('large') !default;

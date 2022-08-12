@@ -1,0 +1,25 @@
+$width-list: (
+    min: fit-content,
+    one_fifth: 20%,
+    one_fourth: 25%,
+    one_third: 33%,
+    half: 50%,
+    two_third: 66%,
+    three_fourth: 75%,
+    four_fifth: 80%,
+    full: 100%,
+) !default;
+
+@function getWidth($width) {
+    @return map-get($width-list, $width);
+}
+
+$min: map-get($width-list, min) !default;
+$one_fifth: map-get($width-list, one_fifth) !default;
+$one_fourth: map-get($width-list, one_fourth) !default;
+$one_third: map-get($width-list, one_third) !default;
+$half: map-get($width-list, half) !default;
+$two_third: map-get($width-list, two_third) !default;
+$three_fourth: map-get($width-list, three_fourth) !default;
+$four_fifth: map-get($width-list, four_fifth) !default;
+$full: map-get($width-list, full) !default;

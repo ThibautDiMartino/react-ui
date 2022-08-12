@@ -1,0 +1,56 @@
+@import '../../scss/variables';
+@import 'bulma/sass/utilities/functions';
+
+$button-colors: $colors-list  !default;
+$button-sizes: $size-list  !default;
+
+.button {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border: 0;
+  border-radius: 3em;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+
+  @each $color-key,
+  $color-value in $button-colors {
+    &.is-#{$color-key} {
+      background-color: $color-value;
+      color: findColorInvert($color-value);
+
+      &:hover {
+        background-color: findColorDark($color-value);
+      }
+      &.outlined,
+      &.blank {
+        background-color: transparent;
+        color: $color-value;
+      }
+      &.outlined {
+        border: 1px solid $color-value;
+      }
+      &.squared {
+        border-radius: .3125rem;
+      }
+    }
+  }
+
+  @each $width-key,
+  $width-value in $width-list {
+    &.is-#{$width-key} {
+      width: $width-value;
+    }
+  }
+
+  @each $size-key,
+  $size-value in $button-sizes {
+    $font-size: nth(nth($size-value, 1), 2);
+    $padding: nth(nth($size-value, 2), 2);
+
+    &.is-#{$size-key} {
+      font-size: $font-size;
+      padding: $padding;
+    }
+  }
+}
