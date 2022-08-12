@@ -1,0 +1,22 @@
+@import '../../scss/variables';
+@import 'bulma/sass/utilities/functions';
+
+$icon-colors: $colors-list  !default;
+$icon-visibility: $visibility-list  !default;
+
+.icon {
+    margin: 0 spacing(2);
+    @each $color-key,
+    $color-value in $icon-colors {
+        &.is-#{$color-key} {
+            fill: findColorInvert($color-value);
+        }
+    }
+
+    @each $visibility-key,
+    $visibility-value in $icon-visibility {
+        &.#{$visibility-key} {
+            visibility: $visibility-value;
+        }
+    }
+}
