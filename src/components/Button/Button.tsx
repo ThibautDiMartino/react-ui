@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import './Button.scss';
-import { ButtonInterface, ButtonType } from './type';
+import { ButtonInterface, ButtonType, WidthType } from './type';
 import Icon from '../Icon';
 import { SizeType } from '../../types/types';
 
@@ -11,7 +11,7 @@ const Button: FC<ButtonInterface> = ({
   squared = false,
   blank = false,
   icon,
-  width,
+  width = WidthType.min,
   label,
   onClick,
   ...props
@@ -24,9 +24,9 @@ const Button: FC<ButtonInterface> = ({
         `is-${buttonType}`,
         `is-${buttonSize}`,
         `is-${width}`,
-        `${outlined ? 'outlined' : ''}`,
-        `${blank ? 'blank' : ''}`,
-        `${squared ? 'squared' : ''}`,
+        outlined ? 'outlined' : '',
+        blank ? 'blank' : '',
+        squared ? 'squared' : '',
       ].join(' ')}
       onClick={onClick}
       {...props}

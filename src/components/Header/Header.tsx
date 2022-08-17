@@ -1,12 +1,13 @@
 import { FC } from 'react';
 
 import Button from '../Button';
-import './header.scss';
+import Flex from '../Flex';
+import './Header.scss';
 import { HeaderInterface } from './type';
 
-export const Header: FC<HeaderInterface> = ({ user, onLogin, onLogout, onCreateAccount }) => (
+const Header: FC<HeaderInterface> = ({ user, onLogin, onLogout, onCreateAccount }) => (
   <header>
-    <div className="wrapper">
+    <Flex style="wrapper" justifyContent='space-between'>
       <div>
         <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
           <g fill="none" fillRule="evenodd">
@@ -28,14 +29,19 @@ export const Header: FC<HeaderInterface> = ({ user, onLogin, onLogout, onCreateA
       </div>
       <div>
         {user ? (
-          <Button onClick={onLogout} label="Log out" />
+          <>
+            <span>Hi, {user.username}</span>
+            <Button onClick={onLogout} label="Log out" />
+          </>
         ) : (
           <>
-            <Button onClick={onLogin} label="Log in" />
+            <Button blank onClick={onLogin} label="Log in" />
             <Button onClick={onCreateAccount} label="Sign up" />
           </>
         )}
       </div>
-    </div>
+    </Flex>
   </header>
 );
+
+export default Header;
