@@ -27,12 +27,12 @@ export enum ButtonType {
 
 export interface ButtonInterface {
     label?: string;
-    buttonType?: ButtonType;
+    buttonType?: string;
     outlined?: boolean;
     blank?: boolean;
     squared?: boolean;
     width?: string;
     icon?: IconDefinition;
     onClick?: () => { };
-    buttonSize?: SizeType;
+    buttonSize?: string;
 }

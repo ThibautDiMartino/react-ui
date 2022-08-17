@@ -1,0 +1,26 @@
+$flex-direction-list: (
+    row: row,
+    row-reverse: row-reverse,
+    column: column,
+    column-reverse: column-reverse,
+    inherit: inherit,
+) !default;
+
+$flex-wrap-list: (
+    wrap: wrap,
+    wrap-reverse: wrap-reverse,
+    inherit: inherit,
+) !default;
+
+$flex-justify-list: (
+    center: center,
+    start: flex-start,
+    flex-start: flex-start,
+    space-between: space-between,
+    space-around: space-around,
+    space-evenly: space-evenly,
+    end: flex-end,
+    flex-end: flex-end,
+    inherit: inherit,
+
+) !default;

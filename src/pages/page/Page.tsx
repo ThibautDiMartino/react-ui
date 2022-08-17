@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
 import PropTypes from 'prop-types';
 
-import './page.scss';
-import { Header } from '../../components/Header/Header';
+import './Page.scss';
+import Header from '../../components/Header';
 
-export const Page: FC<any> = ({ user, onLogin, onLogout, onCreateAccount }) => (
+const Page: FC<any> = ({ user, onLogin, onLogout, onCreateAccount }) => (
   <article>
     <Header user={user} onLogin={onLogin} onLogout={onLogout} onCreateAccount={onCreateAccount} />
 
@@ -69,3 +69,5 @@ Page.propTypes = {
 Page.defaultProps = {
   user: null,
 };
+
+export default Page;
