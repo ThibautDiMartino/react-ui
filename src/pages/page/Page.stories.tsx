@@ -1,9 +1,9 @@
 import { LoggedIn, LoggedOut } from '../../components/Header/Header.stories';
 
-import { Page } from './Page';
+import Page from '.';
 
 export default {
-  title: 'Example/Page',
+  title: 'Pages/Page',
   component: Page,
 };
 

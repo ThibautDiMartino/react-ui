@@ -1,17 +1,29 @@
 import React from 'react';
 
-import { Header } from './Header';
+import Header from './Header';
 import { HeaderInterface } from './type';
 
 export default {
-  title: 'Example/Header',
+  title: 'Components/Header',
   component: Header,
+  argTypes: {
+    user: {
+      options: JSON,
+    },
+    onLogin: () => {},
+    onLogout: () => {},
+    onCreateAccount: () => {},
+  },
 };
 
 const Template = (args: HeaderInterface) => <Header {...args} />;
 
-export const LoggedIn = Template.bind({
-  user: {},
-});
+export const template = Template.bind({});
+
+export const LoggedIn = ({
+  user = {
+    username: "Snass",
+  },
+}) => { return Template({ user }) };
 
 export const LoggedOut = Template.bind({});
