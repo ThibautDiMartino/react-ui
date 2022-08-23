@@ -1,0 +1,17 @@
+@import '../../scss/variables';
+@import 'bulma/sass/utilities/functions';
+
+.input {
+    width: 100%;
+    background-color: inherit;
+    margin-left: spacing(2);
+    border: none;
+    margin: spacing(0) spacing(2);
+    font-size: fontSize(4);
+    height: 100%;
+    &.loading {
+        background: grey;
+        animation: loading 2s infinite;
+        color: none;
+    }
+}

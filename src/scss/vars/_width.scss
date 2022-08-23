@@ -23,3 +23,20 @@ $two_third: map-get($width-list, two_third) !default;
 $three_fourth: map-get($width-list, three_fourth) !default;
 $four_fifth: map-get($width-list, four_fifth) !default;
 $full: map-get($width-list, full) !default;
+
+.is {
+    @each $var in $width-list {
+        $id: nth($var, 1);
+        $val: nth($var, 2);
+        &-#{$id} {
+            width: $val;
+        }
+    }
+}
+
+// -full {
+//     width: 100%;
+// }
+// .is-half {
+//     width: 50%;
+// }

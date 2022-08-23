@@ -6,6 +6,7 @@ $icon-visibility: $visibility-list  !default;
 
 .icon {
     margin: 0 spacing(2);
+    fill: currentColor;
     @each $color-key,
     $color-value in $icon-colors {
         &.is-#{$color-key} {

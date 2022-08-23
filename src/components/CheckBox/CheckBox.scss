@@ -1,0 +1,15 @@
+@import '../../scss/variables';
+@import 'bulma/sass/utilities/functions';
+
+.checkbox-label {
+    height: fit-content;
+    margin: spacing(2) spacing(0);
+
+    .loading {
+        background: #d5d9db;
+        width: 13px;
+        height: 13px;
+        margin: spacing(2) spacing(0);
+        animation: loading 2s 1s infinite;
+    };
+}

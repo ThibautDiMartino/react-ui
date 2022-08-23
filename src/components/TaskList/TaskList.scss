@@ -1,0 +1,14 @@
+@import '../../scss/variables';
+
+.task-list {
+    margin: spacing(0);
+    .empty {
+        text-align: center;
+        .icon {
+            color: #7fbf7f;
+        }
+    }
+    input[type=text] {
+        background-color: inherit;
+    }
+}
