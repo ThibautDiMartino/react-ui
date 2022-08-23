@@ -10,19 +10,21 @@ export enum IconType {
 }
 
 export enum IconSizeType {
-    LARGE = 8,
-    MEDIUM = 7,
-    SMALL = 6,
+    large = 'lg',
+    medium = '1x',
+    small = 'sm',
+    sma = 14,
 }
 
-export const getSize = (val?: any) => { return IconSizeType[val] }
+export const getSize = (val?: any) => { return IconSizeType[val] || val }
 
 export interface IconInterface {
     iconSvg?: IconDefinition;
     type?: string;
     color?: string;
-    size?: string;
+    iconSize?: string;
     hidden?: boolean;
+    loading?: boolean;
     className?: string;
 }
 

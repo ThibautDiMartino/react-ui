@@ -79,3 +79,6 @@ export const outlinedFullWidth = ({
 export const squaredIconOnly = ({
   icon = 'home',
 }) => { return Template({ icon, squared: true }) }
+
+export const Loading = ({
+}) => { return Template({ loading: true }) }
