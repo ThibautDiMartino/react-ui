@@ -7,8 +7,8 @@ $wrap-list: $flex-wrap-list;
 
 .flex {
     display: flex;
-    &>.is-full {
-        margin: 5px 0;
+    .one {
+        flex: 1;
     }
     @each $dir, $val in $direction-list {
         &.#{$dir} {
@@ -23,6 +23,9 @@ $wrap-list: $flex-wrap-list;
     @each $wrap, $val in $wrap-list {
         &.#{$wrap} {
             flex-wrap: $val;
+            &>.is-full {
+                margin: 5px 0;
+            }
         }
     }
 }

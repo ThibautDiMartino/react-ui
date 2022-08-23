@@ -1,3 +1,5 @@
+@import 'bulma/sass/utilities/functions';
+
 $primary: #6666ff !default;
 $primary-light: #9999ff !default;
 $primary-lighter: #ccccff !default;
@@ -7,7 +9,12 @@ $secondary-lighter: #fed6bd !default;
 $tertiary: #b283ac !default;
 $tertiary-light: #c8a7c4 !default;
 $tertiary-lighter: #decadb !default;
+$error: #ff3232 !default;
+$warning: #ffb732 !default;
+$success: #329932 !default;
+$info: #3232ff !default;
 
+$yellow: #ffff4c !default;
 
 $colors-list: (
   primary: $primary,
@@ -19,8 +26,13 @@ $colors-list: (
   tertiary: $tertiary,
   tertiary-light: $tertiary-light,
   tertiary-lighter: $tertiary-lighter,
-  ) !default;
+  error: $error,
+  warning: $warning,
+  success: $success,
+  info: $info,
+) !default;
 
-// @function getColor($color-group, $color) {
-//   @return map-get($colors-list, $color-group, $color);
-// }
+* {
+  background-color: inherit;
+  color: inherit;
+}
