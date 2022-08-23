@@ -14,6 +14,10 @@ export enum WidthType {
 }
 
 export enum ButtonType {
+    ERROR = 'error',
+    WARNING = 'warning',
+    SUCCESS = 'success',
+    INFO = 'info',
     PRIMARY = 'primary',
     PRIMARY_LIGHT = 'primary-light',
     PRIMARY_LIGHTER = 'primary-lighter',
@@ -29,10 +33,12 @@ export interface ButtonInterface {
     label?: string;
     buttonType?: string;
     outlined?: boolean;
+    loading?: boolean;
     blank?: boolean;
     squared?: boolean;
     width?: string;
     icon?: IconDefinition;
-    onClick?: () => { };
+    style?: string;
+    onClick?: () => void;
     buttonSize?: string;
 }

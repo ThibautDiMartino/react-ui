@@ -8,6 +8,7 @@ $button-sizes: $size-list  !default;
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   border: 0;
+  min-width: fit-content;
   border-radius: 3em;
   cursor: pointer;
   display: inline-block;
@@ -26,6 +27,10 @@ $button-sizes: $size-list  !default;
       &.blank {
         background-color: transparent;
         color: $color-value;
+      }
+      @keyframes spinner {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
       }
       &.outlined {
         border: 1px solid $color-value;

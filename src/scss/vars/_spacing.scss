@@ -14,3 +14,46 @@ $spacing-list: (
 @function spacing($size) {
     @return map-get($spacing-list, $size);
 };
+
+.p {
+    @each $var in $spacing-list {
+        $id: nth($var, 1);
+        $val: nth($var, 2);
+        &-#{$id} {
+            padding: $val;
+        }
+        &t-#{$id} { padding-top: $val; }
+        &r-#{$id} { padding-right: $val; }
+        &b-#{$id} { padding-bottom: $val; }
+        &l-#{$id} { padding-left: $val; }
+        &x-#{$id} {
+            padding-left: $val;
+            padding-right: $val;
+        }
+        &y-#{$id} {
+            padding-top: $val;
+            padding-bottom: $val;
+        }
+    }
+}
+.m {
+    @each $var in $spacing-list {
+        $id: nth($var, 1);
+        $val: nth($var, 2);
+        &-#{$id} {
+            margin: $val;
+        }
+        &t-#{$id} { margin-top: $val; }
+        &r-#{$id} { margin-right: $val; }
+        &b-#{$id} { margin-bottom: $val; }
+        &l-#{$id} { margin-left: $val; }
+        &x-#{$id} {
+            margin-left: $val;
+            margin-right: $val;
+        }
+        &y-#{$id} {
+            margin-top: $val;
+            margin-bottom: $val;
+        }
+    }
+}

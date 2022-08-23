@@ -20,6 +20,20 @@ $size-list: (
     @return map-get($size-list, $size);
 }
 
+// .is {
+//     @each $size-key,
+//     $size-value in $size-list {
+//         $font-size: nth(nth($size-value, 1), 2);
+//         $padding: nth(nth($size-value, 2), 2);
+
+//         &-#{$size-key} {
+//             font-size: $font-size;
+//             padding: $padding;
+//         }
+//     }
+// }
+
+
 $small: getSize('small') !default;
 $medium: getSize('medium') !default;
 $large: getSize('large') !default;
