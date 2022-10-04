@@ -3,7 +3,7 @@ import Flex from "../Flex";
 import { TaskInterface } from "./type";
 import './Task.scss';
 import Button from "../Button";
-import { faArrowDown, faArrowRight, faPen, faStar as pinned, faTrash, faTrashCan } from "@fortawesome/free-solid-svg-icons";
+import { faArrowDown, faArrowRight, faPen, faStar as pinned, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { faStar as unPinned } from "@fortawesome/free-regular-svg-icons";
 import Input from "../Input";
 import CheckBox from "../CheckBox";

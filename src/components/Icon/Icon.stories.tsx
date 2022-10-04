@@ -13,7 +13,7 @@ export default {
         type: 'select',
       }
     },
-    size: {
+    iconSsize: {
       options: Object.values(SizeType),
       control: {
         type: 'select',
@@ -24,8 +24,6 @@ export default {
 
 const Template = (args: IconInterface) => <Icon {...args} />
 
-export const template = Template.bind({});
-
-export const withIcon = ({
+export const template = ({
   iconSvg = icons.get('user'),
 }) => { return Template({ iconSvg }) }

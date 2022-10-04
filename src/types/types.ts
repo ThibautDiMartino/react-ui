@@ -1,5 +1,7 @@
 export enum SizeType {
+    XSMALL = 'xsmall',
     SMALL = 'small',
     MEDIUM = 'medium',
-    LARGE = 'large'
+    LARGE = 'large',
+    XLARGE = 'xlarge'
 }
