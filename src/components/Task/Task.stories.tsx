@@ -10,8 +10,7 @@ export default ({
 
 const Template = (args: TaskInterface) => <Task {...args} />;
 
-export const Inbox = ({
-}) => {
+export const Inbox = () => {
     const [taskState, setTaskState] = useState<string>(TaskState.INBOX)
 
     const onArchive = () => setTaskState(taskState === TaskState.ARCHIVED ? TaskState.INBOX : TaskState.ARCHIVED)
@@ -28,8 +27,7 @@ export const Inbox = ({
     return Template({ ...arg })
 };
 
-export const Archived = ({
-}) => {
+export const Archived = () => {
     const [taskState, setTaskState] = useState<string>(TaskState.ARCHIVED)
 
     const onArchive = () => { setTaskState(taskState === TaskState.ARCHIVED ? TaskState.INBOX : TaskState.ARCHIVED) }
@@ -46,8 +44,7 @@ export const Archived = ({
     return Template(arg)
 };
 
-export const Pinned = ({
-}) => {
+export const Pinned = () => {
     const [taskState, setTaskState] = useState<string>(TaskState.PINNED)
 
     const onArchive = () => setTaskState(taskState === TaskState.ARCHIVED ? TaskState.INBOX : TaskState.ARCHIVED)
@@ -64,8 +61,7 @@ export const Pinned = ({
     return Template(arg)
 };
 
-export const Loading = ({
-}) => {
+export const Loading = () => {
     const [taskState, setTaskState] = useState<string>(TaskState.INBOX)
 
     const onArchive = () => setTaskState(taskState === TaskState.ARCHIVED ? TaskState.INBOX : TaskState.ARCHIVED)

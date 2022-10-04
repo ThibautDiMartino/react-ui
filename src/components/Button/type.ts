@@ -1,5 +1,4 @@
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
-import { SizeType } from '../../types/types';
 
 export enum WidthType {
     min = 'min',

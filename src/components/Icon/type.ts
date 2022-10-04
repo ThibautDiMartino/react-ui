@@ -10,9 +10,13 @@ export enum IconType {
 }
 
 export enum IconSizeType {
+    giant = '4x',
+    xlarge = '2x',
+    'x-large' = '2x',
     large = 'lg',
     medium = '1x',
     small = 'sm',
+    xsmall = 'xs',
     sma = 14,
 }
 

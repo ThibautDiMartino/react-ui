@@ -8,6 +8,13 @@ $width-list: (
     three_fourth: 75%,
     four_fifth: 80%,
     full: 100%,
+    tiny: 8px,
+    x-small: 12px,
+    small: 16px,
+    medium: 20px,
+    large: 28px,
+    x-large: 32px,
+    giant: 40px,
 ) !default;
 
 @function getWidth($width) {
@@ -23,6 +30,13 @@ $two_third: map-get($width-list, two_third) !default;
 $three_fourth: map-get($width-list, three_fourth) !default;
 $four_fifth: map-get($width-list, four_fifth) !default;
 $full: map-get($width-list, full) !default;
+$tiny: map-get($width-list, tiny) !default;
+$x-small: map-get($width-list, x-small) !default;
+$small: map-get($width-list, small) !default;
+$medium: map-get($width-list, medium) !default;
+$large: map-get($width-list, large) !default;
+$x-large: map-get($width-list, x-large) !default;
+$giant: map-get($width-list, giant) !default;
 
 .is {
     @each $var in $width-list {
